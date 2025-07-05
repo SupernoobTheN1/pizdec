@@ -68,7 +68,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
     private float _lastCursorUpdateTime = 0f;
     private const float CursorUpdateInterval = 0.1f; // 10 updates per second
 
-    public FireControlNavControl() : base(64f, 768f, 768f)
+    public FireControlNavControl() : base(64f, 512f, 512f)
     {
         IoCManager.InjectDependencies(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
@@ -187,8 +187,6 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
-        UseCircleMaskShader(handle); // Mono
-
         base.Draw(handle);
 
         DrawBacking(handle);
@@ -283,8 +281,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
                     var mapCoords = _transform.GetWorldPosition(gUid);
                     var coordsText = $"({mapCoords.X:0.0}, {mapCoords.Y:0.0})";
 
-                    var labelDimensions = handle.GetDimensions(Font, labelText, 0.9f);
-                    var coordsDimensions = handle.GetDimensions(Font, coordsText, 0.65f);
+                    var labelDimensions = handle.GetDimensions(Font, labelText, 1f);
+                    var coordsDimensions = handle.GetDimensions(Font, coordsText, 0.7f);
 
                     var yOffset = Math.Max(gridBounds.Height, gridBounds.Width) * MinimapScale / 1.8f;
 
@@ -304,11 +302,11 @@ public sealed class FireControlNavControl : BaseShuttleControl
                     var controlExtents = PixelSize - new Vector2(labelDimensions.X, labelDimensions.Y);
                     labelUiPosition = Vector2.Clamp(labelUiPosition, Vector2.Zero, controlExtents);
 
-                    handle.DrawString(Font, labelUiPosition, labelText, 0.9f, labelColor);
+                    handle.DrawString(Font, labelUiPosition, labelText, labelColor);
 
                     if (offsetMax < 1)
                     {
-                        handle.DrawString(Font, coordUiPosition, coordsText, 0.65f, coordColor);
+                        handle.DrawString(Font, coordUiPosition, coordsText, 0.7f, coordColor);
                     }
                 }
             }
@@ -330,7 +328,8 @@ public sealed class FireControlNavControl : BaseShuttleControl
 
             if (blip.Item4 == RadarBlipShape.Ring)
             {
-                DrawShieldRing(handle, blipPos, blip.Item2, blip.Item3.WithAlpha(0.8f));
+                // For Ring shapes, use the real radius but with a dedicated drawing method
+                DrawShieldRing(handle, blipPos, blip.Item2 * MinimapScale, blip.Item3.WithAlpha(0.8f));
             }
             else
             {
@@ -341,8 +340,7 @@ public sealed class FireControlNavControl : BaseShuttleControl
             if (_isMouseInside && _controllables != null)
             {
                 var worldPos = blip.Item1;
-                var isFireControllable = _controllables.Any(c =>
-                {
+                var isFireControllable = _controllables.Any(c => {
                     var coords = EntManager.GetCoordinates(c.Coordinates);
                     var entityMapPos = _transform.ToMapCoordinates(coords);
                     return Vector2.Distance(entityMapPos.Position, worldPos) < 0.1f &&
@@ -419,8 +417,6 @@ public sealed class FireControlNavControl : BaseShuttleControl
                 handle.DrawLine(startPosInView, endPosInView, line.Color.WithAlpha(0.8f));
             }
         }
-
-        ClearShader(handle);
         #endregion
     }
 
@@ -537,18 +533,15 @@ public sealed class FireControlNavControl : BaseShuttleControl
     /// <summary>
     /// Draws a shield ring with constant thickness regardless of zoom level.
     /// </summary>
-    private void DrawShieldRing(DrawingHandleScreen handle, Vector2 position, float worldRadius, Color color)
+    private void DrawShieldRing(DrawingHandleScreen handle, Vector2 position, float radius, Color color)
     {
-        // Convert world radius to radar display radius using the standard minimap scaling
-        var displayRadius = worldRadius * MinimapScale * 0.85f;
-
         // Draw the shield outline as a ring with constant thickness
         const float ringThickness = 2.0f; // Fixed thickness in pixels
 
         // Draw multiple circles with slightly different radii to create a solid ring effect
         for (float offset = 0; offset <= ringThickness; offset += 0.5f)
         {
-            handle.DrawCircle(position, displayRadius + offset, color.WithAlpha(0.5f), false);
+            handle.DrawCircle(position, radius + offset, color.WithAlpha(0.5f), false);
         }
     }
 
