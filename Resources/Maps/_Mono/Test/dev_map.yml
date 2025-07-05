@@ -402,7 +402,6 @@ entities:
       visibleFromOtherGrids: True
       shape: Ring
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AdvancedCapacitorStockPart
   entities:
   - uid: 3
@@ -3320,16 +3319,13 @@ entities:
     - type: Transform
       pos: 11.5,21.5
       parent: 2
-- proto: CircularShieldBase
+- proto: ShieldGenerator
   entities:
   - uid: 544
     components:
     - type: Transform
       pos: -7.5,3.5
       parent: 2
-    - type: CircularShield
-      radius: 1
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -3362,17 +3358,6 @@ entities:
           hard: False
           restitution: 0
           friction: 0.4
-- proto: CircularShieldConsole
-  entities:
-  - uid: 546
-    components:
-    - type: Transform
-      pos: -6.5,3.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        544:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ClosetEmergencyFilledRandom
   entities:
   - uid: 547

@@ -428,7 +428,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirAlarm
   entities:
   - uid: 2
@@ -2156,7 +2155,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 9.5,2.5
       parent: 1
-- proto: CircularShieldBase
+- proto: ShieldGeneratorSmall
   entities:
   - uid: 904
     components:
@@ -2164,18 +2163,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 4.5,-10.5
       parent: 1
-- proto: CircularShieldConsole
-  entities:
-  - uid: 906
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 9.5,-7.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        904:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ClosetWallMaintenanceFilledRandom
   entities:
   - uid: 324

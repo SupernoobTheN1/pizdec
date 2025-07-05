@@ -4321,7 +4321,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 6621
     components:
     - type: MetaData
@@ -4334,7 +4333,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: ActionToggleLight
   entities:
   - uid: 6
@@ -16009,7 +16007,7 @@ entities:
     - Destructible
     - Anchorable
     - Construction
-- proto: CircularShieldBase
+- proto: ShieldGeneratorPOI
   entities:
   - uid: 6619
     components:
@@ -16017,8 +16015,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 20.5,14.5
       parent: 2
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -16053,18 +16049,6 @@ entities:
           friction: 0.4
     - type: ApcPowerReceiver
       powerLoad: 0
-- proto: CircularShieldConsole
-  entities:
-  - uid: 3284
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 16.5,10.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        6619:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: CloningPod
   entities:
   - uid: 716

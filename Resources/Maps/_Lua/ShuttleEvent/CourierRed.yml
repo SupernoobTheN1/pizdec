@@ -131,7 +131,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
   - uid: 30
     components:
     - type: MetaData
@@ -144,7 +143,6 @@ entities:
       shape: Ring
       scale: 0
       radarColor: '#00DEFEFF'
-    - type: CircularShieldRadar
 - proto: AirlockShuttle
   entities:
   - uid: 53
@@ -435,15 +433,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 1.5,3.5
       parent: 1
-- proto: CircularShieldBase
+- proto: ShieldGeneratorSmall
   entities:
   - uid: 29
     components:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
-    - type: CircularShield
-      width: 6.283185307179586 rad
     - type: Fixtures
       fixtures:
         fix1:
@@ -476,17 +472,6 @@ entities:
           hard: False
           restitution: 0
           friction: 0.4
-- proto: CircularShieldConsole
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      pos: 1.5,4.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        29:
-        - CircularShieldConsoleSender: CircularShieldConsoleReceiver
 - proto: ComputerGunneryConsole
   entities:
   - uid: 26
