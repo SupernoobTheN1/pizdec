@@ -30,7 +30,7 @@ public sealed class ShipShieldOverlay : Overlay
         _resourceCache = resourceCache;
         _entManager = entityManager;
         _fixture = _entManager.EntitySysManager.GetEntitySystem<FixtureSystem>();
-        _physics = _entManager.EntitySysManager.GetEntitySystem<SharedPhysicsSystem>();
+        _physics = _entManager.EntitySysManager.GetEntitySystem<PhysicsSystem>();
 
         _unshadedShader = prototypeManager.Index<ShaderPrototype>("unshaded").Instance();
 
