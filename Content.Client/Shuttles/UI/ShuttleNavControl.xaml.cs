@@ -263,7 +263,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
 
     protected override void Draw(DrawingHandleScreen handle)
     {
-        UseCircleMaskShader(handle);
+//        UseCircleMaskShader(handle);
 
         base.Draw(handle);
 
@@ -647,7 +647,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             }
         }
 
-        ClearShader(handle);
+//        ClearShader(handle);
         #endregion
     }
 

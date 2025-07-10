@@ -88,7 +88,7 @@ public partial class MapGridControl : LayoutContainer
 
     public event Action<float>? WorldRangeChanged;
 
-    private readonly ShaderInstance _circleMaskShader; // Mono
+    //    private readonly ShaderInstance _circleMaskShader; // Mono
 
     public MapGridControl() : this(32f, 32f, 32f) { }
 
@@ -108,7 +108,7 @@ public partial class MapGridControl : LayoutContainer
         var cache = IoCManager.Resolve<IResourceCache>();
         _largerFont = new VectorFont(cache.GetResource<FontResource>("/EngineFonts/NotoSans/NotoSans-Regular.ttf"), 16);
 
-        _circleMaskShader = PrototypeManager.Index<ShaderPrototype>("CircleAlphaMask").InstanceUnique(); // Mono
+        //        _circleMaskShader = PrototypeManager.Index<ShaderPrototype>("CircleAlphaMask").InstanceUnique(); // Mono
     }
 
     public void ForceRecenter()
@@ -271,29 +271,30 @@ public partial class MapGridControl : LayoutContainer
             WorldRangeChanged?.Invoke(WorldRange);
         }
     }
-
-    #region Mono
-    /// <summary>
-    /// Masks everything drawn with the shader enabled by a circle.
-    /// If you don't want it circular, don't use this.
-    /// </summary>
-    protected void UseCircleMaskShader(DrawingHandleScreen handle)
-    {
-        // Simple, just base the radius on the width.
-        _circleMaskShader.SetParameter("radius", PixelWidth * 0.5f);
-
-        // Not nearly as simple, we transform the coordinates from top-left origin (UI space) to bottom-left origin (shader fragment space)
-        _circleMaskShader.SetParameter("center", new Vector2(GlobalPixelPosition.X + PixelWidth * 0.5f, DisplayManager.ScreenSize.Y - GlobalPixelPosition.Y - PixelHeight * 0.5f));
-
-        handle.UseShader(_circleMaskShader);
-    }
-
-    /// <summary>
-    /// Verbose shortcut for handle.UseShader(null)
-    /// </summary>
-    protected void ClearShader(DrawingHandleScreen handle)
-    {
-        handle.UseShader(null);
-    }
-    #endregion Mono
 }
+//    #region Mono
+//    /// <summary>
+//    /// Masks everything drawn with the shader enabled by a circle.
+//    /// If you don't want it circular, don't use this.
+//    /// </summary>
+//    protected void UseCircleMaskShader(DrawingHandleScreen handle)
+//    {
+//        // Simple, just base the radius on the width.
+//        _circleMaskShader.SetParameter("radius", PixelWidth * 0.5f);
+//
+//        // Not nearly as simple, we transform the coordinates from top-left origin (UI space) to bottom-left origin (shader fragment space)
+//        _circleMaskShader.SetParameter("center", new Vector2(GlobalPixelPosition.X + PixelWidth * 0.5f, DisplayManager.ScreenSize.Y - GlobalPixelPosition.Y - PixelHeight * 0.5f));
+//
+//        handle.UseShader(_circleMaskShader);
+//    }
+//
+//    /// <summary>
+//    /// Verbose shortcut for handle.UseShader(null)
+//    /// </summary>
+//    protected void ClearShader(DrawingHandleScreen handle)
+//    {
+//        handle.UseShader(null);
+//    }
+//    #endregion Mono
+//}
+//
