@@ -29,7 +29,7 @@
       visible: false
       color: "#FF9933"
   - type: ApcPowerReceiver
-    powerLoad: 15000
+    powerLoad: 1000
   - type: PointLight
     enabled: false
     castShadows: true
