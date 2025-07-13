@@ -5259,8 +5259,6 @@ entities:
     - pos: -2.5,19.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 873
     components:
     - pos: -2.5,20.5
@@ -5406,8 +5404,6 @@ entities:
     - pos: 4.5,9.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 902
     components:
     - pos: 3.5,9.5
@@ -5418,8 +5414,6 @@ entities:
     - pos: 2.5,9.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 904
     components:
     - pos: 1.5,9.5
@@ -5495,15 +5489,11 @@ entities:
     - pos: 2.5,7.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 919
     components:
     - pos: 1.5,7.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 920
     components:
     - pos: 0.5,7.5
@@ -5579,8 +5569,6 @@ entities:
     - pos: 1.5,5.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 935
     components:
     - pos: 1.5,4.5
@@ -5696,8 +5684,6 @@ entities:
     - pos: -7.5,4.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 958
     components:
     - pos: -7.5,3.5
@@ -5798,36 +5784,26 @@ entities:
     - pos: -15.5,3.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 978
     components:
     - pos: -15.5,2.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 979
     components:
     - pos: -9.5,0.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 980
     components:
     - pos: -10.5,0.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 981
     components:
     - pos: -11.5,0.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 982
     components:
     - pos: -8.5,2.5
@@ -5838,8 +5814,6 @@ entities:
     - pos: -9.5,2.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 984
     components:
     - pos: -14.5,4.5
@@ -5895,15 +5869,11 @@ entities:
     - pos: -8.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 995
     components:
     - pos: -10.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 996
     components:
     - pos: -9.5,9.5
@@ -5954,8 +5924,6 @@ entities:
     - pos: 2.5,-11.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1006
     components:
     - pos: 2.5,-10.5
@@ -6106,8 +6074,6 @@ entities:
     - pos: 14.5,3.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1036
     components:
     - pos: 13.5,3.5
@@ -6223,8 +6189,6 @@ entities:
     - pos: 13.5,10.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1059
     components:
     - pos: 13.5,9.5
@@ -6297,8 +6261,6 @@ entities:
     - pos: 3.5,19.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1073
     components:
     - pos: 3.5,20.5
@@ -6309,15 +6271,11 @@ entities:
     - pos: 2.5,24.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1075
     components:
     - pos: -0.5,24.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1076
     components:
     - pos: -0.5,23.5
@@ -6375,8 +6333,6 @@ entities:
     - pos: 3.5,19.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1087
     components:
     - pos: 2.5,19.5
@@ -6407,8 +6363,6 @@ entities:
     - pos: -2.5,19.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1093
     components:
     - pos: 2.5,4.5
@@ -6424,15 +6378,11 @@ entities:
     - pos: 1.5,5.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1096
     components:
     - pos: 4.5,9.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1097
     components:
     - pos: 3.5,9.5
@@ -6443,8 +6393,6 @@ entities:
     - pos: 2.5,9.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1099
     components:
     - pos: 1.5,9.5
@@ -6455,22 +6403,16 @@ entities:
     - pos: 1.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1101
     components:
     - pos: 1.5,6.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1102
     components:
     - pos: 1.5,5.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1103
     components:
     - pos: 1.5,0.5
@@ -6571,15 +6513,11 @@ entities:
     - pos: 14.5,3.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1123
     components:
     - pos: 13.5,10.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1124
     components:
     - pos: 13.5,9.5
@@ -6625,8 +6563,6 @@ entities:
     - pos: -7.5,4.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1133
     components:
     - pos: -7.5,3.5
@@ -6757,8 +6693,6 @@ entities:
     - pos: 2.5,-11.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1159
     components:
     - pos: 1.5,10.5
@@ -7124,7 +7058,7 @@ entities:
     - pos: 15.5,12.5
       parent: 1
       type: Transform
-- proto: CrateSyndicateLightSurplusBundle
+- proto: CrateSyndicateSurplusBundle
   entities:
   - uid: 1210
     components:
@@ -7455,7 +7389,7 @@ entities:
     - pos: 14.635597,0.5535599
       parent: 1
       type: Transform
-- proto: FoodTinBeansOpen
+- proto: FoodTinBeansTrash
   entities:
   - uid: 1261
     components:
@@ -7825,8 +7759,6 @@ entities:
       pos: 4.5,10.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1325
     components:
     - rot: -1.5707963267948966 rad
@@ -7869,16 +7801,12 @@ entities:
       pos: -3.5,10.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1332
     components:
     - rot: -1.5707963267948966 rad
       pos: -3.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1333
     components:
     - rot: -1.5707963267948966 rad
@@ -7903,8 +7831,6 @@ entities:
       pos: 1.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1337
     components:
     - rot: -1.5707963267948966 rad
@@ -7923,8 +7849,6 @@ entities:
       pos: 4.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1340
     components:
     - rot: 3.141592653589793 rad
@@ -8051,8 +7975,6 @@ entities:
     - pos: 13.5,6.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1362
     components:
     - rot: -1.5707963267948966 rad
@@ -8143,8 +8065,6 @@ entities:
       pos: -10.5,8.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1377
     components:
     - rot: 3.141592653589793 rad
@@ -8175,8 +8095,6 @@ entities:
       pos: -13.5,4.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1382
     components:
     - rot: 3.141592653589793 rad
@@ -8201,8 +8119,6 @@ entities:
       pos: -9.5,-1.5
       parent: 1
       type: Transform
-    - enabled: True
-      type: AmbientSound
   - uid: 1386
     components:
     - rot: -1.5707963267948966 rad
@@ -9012,7 +8928,7 @@ entities:
       parent: 1
       type: Transform
     - content: >
-        Will! Stop leaving the secret door to this place open, if they figure out what we're doing in here they'll probably just execute us, not even a trial or anything. 
+        Will! Stop leaving the secret door to this place open, if they figure out what we're doing in here they'll probably just execute us, not even a trial or anything.
 
 
         Also, stop trying to mix shit into the solution to make it "safer", we're here to make the good stuff, not whatever diluted crap your trying to make in the name of "safety", you think anybody gives a shit about that way out here!?
@@ -9907,7 +9823,7 @@ entities:
       pos: -3.5,10.5
       parent: 1
       type: Transform
-- proto: RandomRockSpawner
+- proto: NFRockMineralSoft
   entities:
   - uid: 1636
     components:
@@ -13627,7 +13543,6 @@ entities:
         2242:
         - Pressed: Open
       type: DeviceLinkSource
-    - type: ItemCooldown
   - uid: 2249
     components:
     - rot: 3.141592653589793 rad
@@ -13673,7 +13588,6 @@ entities:
         2242:
         - Pressed: Close
       type: DeviceLinkSource
-    - type: ItemCooldown
 - proto: SignArmory
   entities:
   - uid: 2251
@@ -14251,25 +14165,6 @@ entities:
       type: Transform
     - bodyType: Static
       type: Physics
-- proto: Telecrystal1
-  entities:
-  - uid: 1214
-    components:
-    - flags: InContainer
-      type: MetaData
-    - parent: 1213
-      type: Transform
-    - count: 2
-      type: Stack
-    - size: 2
-      type: Item
-    - canCollide: False
-      type: Physics
-  - uid: 2343
-    components:
-    - pos: 11.763307,12.28092
-      parent: 1
-      type: Transform
 - proto: ToiletDirtyWater
   entities:
   - uid: 2344
@@ -17941,7 +17836,7 @@ entities:
       pos: 4.5,7.5
       parent: 1
       type: Transform
-- proto: XenoAISpawner
+- proto: NFSpawnMobXenoT2
   entities:
   - uid: 3005
     components:
